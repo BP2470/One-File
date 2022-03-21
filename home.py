@@ -14,6 +14,8 @@ city_names = ['Paris','London','Rome','Tahiti']
 #Links need https
 @myobj.route('/')
 def home():
+    name = 'Lisa'
+    city_names = ['Paris','London','Rome','Tahiti']
     return f'''
     <html>
     <head>
@@ -21,7 +23,7 @@ def home():
     <body>
         <h1>Welcome,{name}!</h1>
         <div>
-        <a href="https://www.google.com">notgoogle</a>
+        <a href="www.google.com">notgoogle</a>
         </div>
         <ul>
             <li>{city_names[0]}</li>
