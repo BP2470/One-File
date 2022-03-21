@@ -19,9 +19,9 @@ def home():
     <head>
     <title>Home page</title>
     <body>
-        <h1> Welcome,{name}!
+        <h1>Welcome,{name}!</h1>
         <div>
-        <a href="https://www.google.com"> notgoogle </a>
+        <a href="https://www.google.com">notgoogle</a>
         </div>
         <ul>
             <li>{city_names[0]}</li>
@@ -33,4 +33,4 @@ def home():
     </html>
     '''
 
-#myobj.run()
+myobj.run()
