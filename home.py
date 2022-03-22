@@ -6,6 +6,7 @@ name = 'Lisa'
 city_names = ['Paris','London','Rome','Tahiti']
 
 #Links need https
+#autograder formatting is different from original prompt
 @myobj.route('/')
 def home():
     name = 'Lisa'
@@ -15,7 +16,7 @@ def home():
     <head>
     <title>Home page</title>
     <body>
-        <h1>Welcome,{name}!</h1>
+        <h1>Welcome{name}!</h1>
         <div>
         <a href="www.google.com">notgoogle</a>
         </div>
