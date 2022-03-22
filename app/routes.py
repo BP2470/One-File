@@ -1,10 +1,18 @@
 from app import myobj
-from app.login import LoginForm
 from flask import render_template, flash
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import DataRequired
 
 name = 'Lisa'
 city_names = ['Paris','London','Rome','Tahiti']
 
+class LoginForm(FlaskForm):
+    username = StringField('City Name', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember_me = BooleanField('Remember Me')
+    submit = SubmitField('Submit')
+    
 @myobj.route('/', methods =['GET','POST'])
 def login():
     form = LoginForm()
