@@ -1,8 +1,18 @@
-{%extends 'top.html'%}
-{%block content%}
-                <h1>Welcome {{name}}</h1>
+<head>
+    <title>City</title>
+<body>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li> {{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+                <h1>Welcome{{name}}!</h1>
                 <div>
-                <a href="https://www.google.com">not google</a>
+                <a href="www.google.com">notgoogle</a>
                 </div>
                 <ul>
                     {% for city in city_names %}
@@ -17,4 +27,5 @@
                     </p>
                     <p>{{form.submit()}}</p>
                 </form>
-{%endblock%}
+        </body>
+</html>
