@@ -15,7 +15,7 @@ city_names = ['Paris','London','Rome','Tahiti']
 
   
 @myobj.route('/', methods =['GET','POST'])
-def login():
+def home():
     form = LoginForm()
     #Different code issues?
     if form.validate_on_submit:
